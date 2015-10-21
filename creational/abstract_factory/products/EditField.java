@@ -1,7 +1,10 @@
 package creational.abstract_factory.products;
 
-public interface EditField extends Product {
+public class EditField implements Product {
 
-	public void draw();
+	@Override
+	public void draw() {
+		
+	}
 	
 }

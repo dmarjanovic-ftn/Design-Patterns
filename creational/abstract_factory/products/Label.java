@@ -1,7 +1,10 @@
 package creational.abstract_factory.products;
 
-public interface Label extends Product {
+public class Label implements Product {
 
-	public void draw();
-	
+	@Override
+	public void draw() {
+		
+	}
+
 }

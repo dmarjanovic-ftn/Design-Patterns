@@ -1,7 +1,10 @@
 package creational.abstract_factory.products;
 
-public interface Button extends Product {
+public class Button implements Product {
 
-	public void draw();
+	@Override
+	public void draw() {
+		
+	}
 	
 }

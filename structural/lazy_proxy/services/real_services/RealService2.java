@@ -1,4 +1,4 @@
-package structural.lazy_proxy.real_services;
+package structural.lazy_proxy.services.real_services;
 
 import structural.lazy_proxy.services.Service;
 

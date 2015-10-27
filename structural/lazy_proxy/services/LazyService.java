@@ -1,7 +1,7 @@
 package structural.lazy_proxy.services;
 
-import structural.lazy_proxy.real_services.RealService1;
-import structural.lazy_proxy.real_services.RealService2;
+import structural.lazy_proxy.services.real_services.RealService1;
+import structural.lazy_proxy.services.real_services.RealService2;
 
 public class LazyService implements Service {
 

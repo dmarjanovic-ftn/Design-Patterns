@@ -1,6 +1,7 @@
 package creational.singleton;
 
 
+import creational.singleton.singleton_enum.SingletonEnum;
 import creational.singleton.singleton_without_enum.SingletonClass;
 
 import java.lang.reflect.Constructor;
@@ -37,7 +38,7 @@ public class App {
             constructors[0].setAccessible(true);
             SingletonClass C = (SingletonClass) constructors[0].newInstance();
 
-            System.out.println("Class C: " + C.getAttribute());
+            System.out.println("Class C: " + C.getAttribute() + "\n");
             // Yeah, we get new instance using reflection...
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
@@ -49,6 +50,12 @@ public class App {
             e.printStackTrace();
         }
 
+        // Example using enum singleton
+        SingletonEnum.INSTANCE.printHelloMessage();
+
+        System.out.println(SingletonEnum.INSTANCE.getMessage());
+        SingletonEnum.INSTANCE.setMessage("Hello from the other side!");
+        System.out.println(SingletonEnum.INSTANCE.getMessage());
 
     }
 

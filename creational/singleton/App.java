@@ -51,11 +51,18 @@ public class App {
         }
 
         // Example using enum singleton
-        SingletonEnum.INSTANCE.printHelloMessage();
+        SingletonEnum D = SingletonEnum.INSTANCE;
+        D.setMessage("Hello, friend!");
 
-        System.out.println(SingletonEnum.INSTANCE.getMessage());
-        SingletonEnum.INSTANCE.setMessage("Hello from the other side!");
-        System.out.println(SingletonEnum.INSTANCE.getMessage());
+        System.out.println("Class D: " + D.getMessage());
+        D.setMessage("Hello, it's me...");
+
+        SingletonEnum E = SingletonEnum.INSTANCE;
+        System.out.println("Class E: " + E.getMessage());
+
+        // Notice! We set message with E instance, and print with D instance.
+        E.setMessage("Hello from the other side...");
+        System.out.println("Class D: " + D.getMessage());
 
     }
 
